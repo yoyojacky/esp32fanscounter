@@ -1,4 +1,4 @@
-from machine import Pin, I2C
+from machine import Pin, SoftI2C
 import network
 import urequests
 import time
@@ -6,7 +6,7 @@ from ssd1306 import SSD1306_I2C
 import framebuf
 
 
-i2c = I2C(scl=Pin(22), sda=Pin(21), freq=1000000)
+i2c = SoftI2C(scl=Pin(22), sda=Pin(21), freq=400000)
 # oled 0.96 inch
 WIDTH = 128
 HEIGHT = 64
@@ -22,7 +22,8 @@ logo_buff2 = framebuf.FrameBuffer(bilibili2_logo, 128,64, framebuf.MONO_HLSB)
 
 
 # vmid 换成你自己id
-url = 'https://api.bilibili.com/x/relation/stat?vmid=22813057&jsonp=jsonp'
+vmid = '你的vmid' 
+url = 'https://api.bilibili.com/x/relation/stat?vmid='+ vmid +'&jsonp=jsonp'
 ssid = '替换成你的wifi的ssid'
 password = '你的密码'
 
