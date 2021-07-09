@@ -8,3 +8,6 @@
 ![bilibili](https://raw.githubusercontent.com/yoyojacky/esp32fanscounter/main/bilibili.png)
 * 图2
 ![bilibili2](https://raw.githubusercontent.com/yoyojacky/esp32fanscounter/main/bilibili2.png)
+## 后续可能需要更新使用SoftI2C替换I2C来进行实例化。
+只需要替换I2C到SoftI2C即可，其他参数基本一样
+##
